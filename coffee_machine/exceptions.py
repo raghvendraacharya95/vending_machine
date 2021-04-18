@@ -1,0 +1,2 @@
+class InadequateIngridientsException(Exception):
+    pass
