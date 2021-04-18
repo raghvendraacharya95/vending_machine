@@ -3,7 +3,7 @@ from ingredients import IngredientsType, Ingredient
 from sample_input import sample_input
 from vending_machine import VendingMachine
 from beverage import Beverage
-from exceptions import InadequateIngridientsException
+# from exceptions import InadequateIngridientsException
 
 def main():
     # Prepare Inventory
@@ -26,7 +26,7 @@ def main():
     for beverage in beverages:
         try:
             vending_machine.make_beverage(beverage)
-        except InadequateIngridientsException as e:
+        except Exception as e:
             print(e)
 
 def get_total_outlets():

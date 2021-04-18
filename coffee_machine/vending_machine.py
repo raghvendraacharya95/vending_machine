@@ -1,5 +1,5 @@
 from inventory import Inventory
-from exceptions import InadequateIngridientsException
+# from exceptions import InadequateIngridientsException
 
 class VendingMachine:
     __instance = None
@@ -32,7 +32,7 @@ class VendingMachine:
                 inv.deduct_ingredient_from_inventory(ingredient.ingredient_type, ingredient.quantity)
             print(beverage.beverages_type+" is prepared !!")
         else:
-            raise InadequateIngridientsException(
+            raise Exception(
                 "Can not make "+ beverage.beverages_type +" becasue inadequate ingridient "+
                 str(inadequate_ingridients),
             )
